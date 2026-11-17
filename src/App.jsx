@@ -1,11 +1,12 @@
 import { NavLink, Routes, Route } from "react-router";
 import Inicio from "./pages/Inicio.jsx";
 import Cadastro from "./pages/Cadastro.jsx";
+
 export default function App() {
   return (
     <div className="container">
       <header>
-        <strong>Portal de Cursos</strong>
+        <strong>VerdeEdu Cursos</strong>
         <nav aria-label="Menu principal">
           <NavLink to="/" end>Início</NavLink>
           <NavLink to="/cadastro">Cadastro</NavLink>
