@@ -60,95 +60,107 @@ export default function Cadastro() {
 
   return (
     <section>
-      <h1>Cadastro de usuário</h1>
-      <p>Preencha todos os campos para continuar.</p>
-      <form onSubmit={enviar} noValidate>
-        <label htmlFor="nome">Nome completo</label>
-        <input
-          id="nome"
-          name="nome"
-          value={form.nome}
-          onChange={alterar}
-          aria-invalid={!!erros.nome}
-          aria-describedby={erros.nome ? "erro-nome" : undefined}
-        />
-        {erros.nome && (
-          <small id="erro-nome" className="erro">
-            {erros.nome}
-          </small>
-        )}
+      <section className="cadastro">
+        <div className="cadastro-header">
+          <p className="eyebrow">Inscrição</p>
+          <h1>Cadastro de usuário</h1>
+          <p>Preencha todos os campos para realizar sua inscrição e concorrer ao curso desejado.</p>
+        </div>
+      </section>
+      <section>
+        <form onSubmit={enviar} noValidate>
+          <label htmlFor="nome">Nome completo</label>
+          <input
+            id="nome"
+            name="nome"
+            value={form.nome}
+            onChange={alterar}
+            aria-invalid={!!erros.nome}
+            aria-describedby={erros.nome ? "erro-nome" : undefined}
+          />
+          {erros.nome && (
+            <small id="erro-nome" className="erro">
+              {erros.nome}
+            </small>
+          )}
 
-        <label htmlFor="email">E-mail</label>
-        <input
-          id="email"
-          name="email"
-          type="email"
-          value={form.email}
-          onChange={alterar}
-          aria-invalid={!!erros.email}
-          aria-describedby={erros.email ? "erro-email" : undefined}
-        />
-        {erros.email && (
-          <small id="erro-email" className="erro">
-            {erros.email}
-          </small>
-        )}
+          <label htmlFor="email">E-mail</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={alterar}
+            aria-invalid={!!erros.email}
+            aria-describedby={erros.email ? "erro-email" : undefined}
+          />
+          {erros.email && (
+            <small id="erro-email" className="erro">
+              {erros.email}
+            </small>
+          )}
 
-        <label htmlFor="curso">Curso de interesse</label>
-        <select
-          id="curso"
-          name="curso"
-          value={form.curso}
-          onChange={alterar}
-          aria-invalid={!!erros.curso}
-          aria-describedby={erros.curso ? "erro-curso" : undefined}
-        >
-          <option value="">Selecione...</option>
-          <option value="Desenvolvimento Web">Desenvolvimento Web</option>
-          <option value="Design Gráfico">Design Gráfico</option>
-          <option value="Marketing Digital">Marketing Digital</option>
-        </select>
-        {erros.curso && (
-          <small id="erro-curso" className="erro">
-            {erros.curso}
-          </small>
-        )}
+          <label htmlFor="curso">Curso de interesse</label>
+          <select
+            id="curso"
+            name="curso"
+            value={form.curso}
+            onChange={alterar}
+            aria-invalid={!!erros.curso}
+            aria-describedby={erros.curso ? "erro-curso" : undefined}
+          >
+            <option value="">Selecione...</option>
+            <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+            <option value="Design Gráfico">Design Gráfico</option>
+            <option value="Marketing Digital">Marketing Digital</option>
+            <option value="Ciências Jurídicas e Sociais">Ciências Jurídicas e Sociais</option>
+            <option value="Medicina">Medicina</option>
+            <option value="Bacharelado em Pedagogia">Bacharelado em Pedagogia</option>
+            <option value="Engenharia Civil">Engenharia Civil</option>
+            <option value="Engenharia Elétrica">Engenharia Elétrica</option>
+          </select>
+          {erros.curso && (
+            <small id="erro-curso" className="erro">
+              {erros.curso}
+            </small>
+          )}
 
-        <label htmlFor="senha">Senha</label>
-        <input
-          id="senha"
-          name="senha"
-          type="password"
-          value={form.senha}
-          onChange={alterar}
-          aria-invalid={!!erros.senha}
-          aria-describedby={erros.senha ? "erro-senha" : undefined}
-        />
-        {erros.senha && (
-          <small id="erro-senha" className="erro">
-            {erros.senha}
-          </small>
-        )}
+          <label htmlFor="senha">Senha</label>
+          <input
+            id="senha"
+            name="senha"
+            type="password"
+            value={form.senha}
+            onChange={alterar}
+            aria-invalid={!!erros.senha}
+            aria-describedby={erros.senha ? "erro-senha" : undefined}
+          />
+          {erros.senha && (
+            <small id="erro-senha" className="erro">
+              {erros.senha}
+            </small>
+          )}
 
-        <label htmlFor="confirmar">Confirmar senha</label>
-        <input
-          id="confirmar"
-          name="confirmar"
-          type="password"
-          value={form.confirmar}
-          onChange={alterar}
-          aria-invalid={!!erros.confirmar}
-          aria-describedby={erros.confirmar ? "erro-confirmar" : undefined}
-        />
-        {erros.confirmar && (
-          <small id="erro-confirmar" className="erro">
-            {erros.confirmar}
-          </small>
-        )}
+          <label htmlFor="confirmar">Confirmar senha</label>
+          <input
+            id="confirmar"
+            name="confirmar"
+            type="password"
+            value={form.confirmar}
+            onChange={alterar}
+            aria-invalid={!!erros.confirmar}
+            aria-describedby={erros.confirmar ? "erro-confirmar" : undefined}
+          />
+          {erros.confirmar && (
+            <small id="erro-confirmar" className="erro">
+              {erros.confirmar}
+            </small>
+          )}
 
-        <button type="submit">Cadastrar</button>
-      </form>
-      {sucesso && <p className="sucesso" role="status">{sucesso}</p>}
+          <button type="submit">Cadastrar</button>
+        </form>
+        {sucesso && <p className="sucesso" role="status">{sucesso}</p>}
+      </section>
     </section>
   );
 }
