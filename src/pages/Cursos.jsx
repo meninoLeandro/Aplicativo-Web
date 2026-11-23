@@ -21,7 +21,7 @@ export default function Cursos() {
       descricao:
         "Domine conteúdo, redes sociais, campanhas e estratégias para crescer na internet.",
       nivel: "Iniciante",
-      carga: "36 horas",
+      carga: "48 horas",
       destaque: "Alta demanda",
     },
     {
@@ -29,7 +29,7 @@ export default function Cursos() {
       descricao:
         "Domine conteúdo, redes sociais, campanhas e estratégias para crescer na internet.",
       nivel: "Avançado",
-      carga: "36 horas",
+      carga: "50 horas",
       destaque: "Alta demanda",
     },
     {
@@ -37,7 +37,7 @@ export default function Cursos() {
       descricao:
         "Torne-se uma pessoa essencial para a área da educação, seja um bom profissional para docência e gestão escolar.",
       nivel: "Avançado",
-      carga: "36 horas",
+      carga: "30 horas",
       destaque: "Alta demanda",
     },
     {
@@ -45,7 +45,7 @@ export default function Cursos() {
       descricao:
         "Torne-se um engenheiro civil renomado e de sucesso.",
       nivel: "Intermediário",
-      carga: "36 horas",
+      carga: "35 horas",
       destaque: "Alta demanda",
     },
     {
@@ -53,7 +53,7 @@ export default function Cursos() {
       descricao:
         "Torne-se um engenheiro civil renomado e de sucesso.",
       nivel: "Intermediário",
-      carga: "36 horas",
+      carga: "44 horas",
       destaque: "Alta demanda",
     },
   ];
